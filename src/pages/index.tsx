@@ -1,9 +1,17 @@
 import ExperienceBar from '../components/ExperienceBar';
-import styles from '../styles/main.module.css';
+import Profile from '../components/Profile';
+import styles from '../styles/pages/main.module.css';
 export default function Home() {
   return (
     <div className={styles.container}>
       <ExperienceBar />
+
+      <section>
+        <div>
+          <Profile />
+        </div>
+        <div></div>
+      </section>
     </div>
   );
 }
