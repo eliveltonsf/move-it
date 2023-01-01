@@ -1,4 +1,4 @@
-import styles from '../styles/components/Profile.module.css';
+import styles from 'styles/components/Profile.module.css';
 const Profile = () => {
   return (
     <div className={styles.profileContainer}>

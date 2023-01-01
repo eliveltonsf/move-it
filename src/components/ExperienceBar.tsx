@@ -1,4 +1,4 @@
-import styles from '../styles/components/ExprecienceBar.module.css';
+import styles from 'styles/components/ExprecienceBar.module.css';
 
 const ExperienceBar = () => {
   return (
