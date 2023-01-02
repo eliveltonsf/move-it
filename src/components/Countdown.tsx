@@ -9,7 +9,7 @@ const Countdown = () => {
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
-  const { startNewChallenges } = useContext(ChallengesContext);
+  const { startNewChallenge } = useContext(ChallengesContext);
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -35,7 +35,7 @@ const Countdown = () => {
     } else if (isActive && time === 0) {
       setHasFinished(true);
       setIsActive(false);
-      startNewChallenges();
+      startNewChallenge();
     }
   }, [isActive, time]);
 
