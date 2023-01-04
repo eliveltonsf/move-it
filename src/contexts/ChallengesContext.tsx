@@ -2,8 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext, useState, ReactNode, useEffect } from 'react';
 import challenges from 'repositories/challenges.json';
-
-export const ChallengesContext = createContext({} as IChallengesContextData);
+import Cookies from 'js-cookie';
 
 interface IChallenge {
   type: string;
@@ -25,12 +24,17 @@ interface IChallengesContextData {
 
 interface IChallengesProvider {
   children: ReactNode;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
 }
 
-export function ChallengesProvider({ children }: IChallengesProvider) {
-  const [level, setLevel] = useState(1);
-  const [currentExperience, setCurrentExperience] = useState(0);
-  const [challengesCompleted, setChallengesCompleted] = useState(0);
+export const ChallengesContext = createContext({} as IChallengesContextData);
+
+export function ChallengesProvider({ children, ...rest }: IChallengesProvider) {
+  const [level, setLevel] = useState(rest.level ?? 1);
+  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.currentExperience ?? 0);
 
   const [activeChallenge, setActiveChallenge] = useState<IChallenge | null>(null);
 
@@ -39,6 +43,12 @@ export function ChallengesProvider({ children }: IChallengesProvider) {
   useEffect(() => {
     Notification.requestPermission();
   }, []);
+
+  useEffect(() => {
+    Cookies.set('level', String(level));
+    Cookies.set('currentExperience', String(currentExperience));
+    Cookies.set('challengesCompleted', String(challengesCompleted));
+  }, [level, currentExperience, challengesCompleted]);
 
   function levelUp() {
     setLevel(level + 1);
