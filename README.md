@@ -15,8 +15,8 @@
 <img src="https://shields.io/badge/-Next.js-05122A?style=for-the-badge&logo=Next.js&logoColor=000000"/>
 <img src="https://img.shields.io/badge/-React.JS-05122A?style=for-the-badge&logo=react"/>
 <img src="https://shields.io/badge/-Typescript-05122A?style=for-the-badge&logo=typescript"/>
-<img src="https://img.shields.io/badge/ESLint-%2307405e.svg?style=for-the-badge&logo=ESLint&logoColor=4B32C3"/>
-<img src="https://img.shields.io/badge/Prettier-%2307405e.svg?style=for-the-badge&logo=Prettier&logoColor=F7B93E"/>
+<img src="https://img.shields.io/badge/ESLint-05122A?style=for-the-badge&logo=ESLint&logoColor=4B32C3"/>
+<img src="https://img.shields.io/badge/Prettier-05122A?style=for-the-badge&logo=Prettier&logoColor=F7B93E"/>
 </p>
 
 * [Title and image](#title)
