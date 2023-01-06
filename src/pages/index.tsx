@@ -25,7 +25,7 @@ export default function Home(props: any) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      <div className={styles.container}>
+      <div className={styles.containerMain}>
         <Head>
           <title>Início | Move.it</title>
         </Head>
