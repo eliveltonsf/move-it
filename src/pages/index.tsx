@@ -18,7 +18,6 @@ interface IHomeProps {
 }
 
 export default function Home(props: any) {
-  console.log(props);
   return (
     <ChallengesProvider
       level={props.level}
